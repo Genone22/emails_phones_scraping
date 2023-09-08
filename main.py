@@ -81,7 +81,7 @@ def crawl(q, result):
 			contacts_f = {'website': res.url, 'Email': '', 'Phone': ''}
 
 			try:
-				contact_element = info.find('a', text=re.compile('contact',
+				contact_element = info.find('a', string=re.compile('contact',
 				                                                 re.IGNORECASE))
 				if contact_element:
 					contact = contact_element.get('href')
